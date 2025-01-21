@@ -1,0 +1,356 @@
+:root{
+    --primary-orange: #FA5A0A;
+}
+
+html{
+    font-size: 13px;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: "Nunito", serif;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul{
+    padding-left: 0px;
+}
+
+.section-header{
+    font-size: 3rem;
+}
+
+.section-padding,.testimony-container{
+    padding: 5rem 0px;
+}
+
+.header-link{
+    border-bottom: 2px solid transparent;
+    transition: all .2s;
+    list-style-type: none;
+    color: white;
+}
+
+.header-link:hover{
+    color: var(--primary-orange);
+    border-color: var(--primary-orange);
+}
+
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hero-section{
+    height: 720px;
+    background-color: #F2F2F2;
+}
+
+.hero-section-bg-example{
+    background-color: #F2F2F2;
+    background: url(./assets/images/HeroBg-min.png) no-repeat;
+    background-size: cover;
+    background-position-x: 80%;
+}
+
+.hero-section-heading{
+    font-size: 4rem;
+}
+
+.hero-section-mascot{
+    position: relative;
+    bottom: 130px;
+}
+
+.hero-carousel-indicators{
+    display: flex;
+    gap: 20px;
+    z-index: 2;
+    position: absolute;
+    bottom: 50px;
+}
+
+.hero-carousel-indicators.carousel-indicators [data-bs-target].hero-section-indicator{
+    width: 12px;
+    height: 12px;
+    background-color: rgba(0, 0, 0, 0.405);
+    border-radius: 50%;
+    border: none;
+}
+
+.hero-carousel-indicators.carousel-indicators [data-bs-target].hero-section-indicator.active{
+    background-color: var(--primary-orange);
+    width: 30px;
+    border-radius: 8px;
+}
+
+.orange-circle-top-right{
+    position: absolute;
+    top: -60%;
+    right: -25%;
+}
+
+.section-header-icon{
+    width: 5rem;
+}
+
+.sales-section-mascot{
+    position: absolute;
+    right: 0;
+    width: 10%;
+    max-width: 163px;
+}
+
+.product-card{
+    background-color: white;
+    padding: 8px 8px 16px 8px;
+    border: 2px solid rgba(128, 128, 128, 0.537);
+    flex: 1;
+    cursor: pointer;
+}
+
+.product-card-img-container{
+    width: 100%;
+    position: relative;
+}
+
+.product-card-sales-off{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 3px 6px;
+    color: white;
+}
+
+.product-card-img{
+    width: 100%;
+}
+
+.product-category{
+    position: relative;
+    padding: 8px;
+    width: 500px;
+}
+
+.orange-circle-bot-left{
+    position: absolute;
+    bottom: -110%;
+    left: -30%;
+}
+
+.testimony-img-container{
+    width: 100%;
+}
+
+.testimony-container,.testimony-container-inner{
+    width: 100%;
+}
+
+.testimony-card{
+    height: 15rem;
+}
+
+.orange-circle-bot-mid{
+    position: absolute;
+    bottom: -520px;
+    left: 26%;
+}
+
+.showroom-nav-container{
+    display: flex;
+}
+
+.showroom-nav{
+    border-bottom: 3px solid rgba(0, 0, 0, 0.25);
+    color: rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+.showroom-nav:hover,.showroom-nav.active{
+    color: rgba(0, 0, 0, 0.25);
+    text-shadow:0px 0px 1px black;
+}
+
+.shifting-underline{
+    position: absolute;
+    border-bottom: 3px solid transparent;
+    transition: all .25s ;
+}
+
+.showroom-location-container{
+    min-height: 200px;
+    max-height: 300px;
+    overflow-y: auto;
+    --scrollbar-width: 8px;
+    --mask-height: 20px;
+    padding-bottom: var(--mask-height);
+    padding-top: var( --mask-height);
+    padding-right: 20px;
+    --mask-image-content: linear-gradient(
+        to bottom,
+        transparent,
+        black var(--mask-height),
+        black calc(100% - var(--mask-height)),
+        transparent
+    );
+    --mask-size-content: calc(100% - var(--scrollbar-width)) 100%;
+    --mask-image-scrollbar: linear-gradient(black, black);
+    --mask-size-scrollbar: var(--scrollbar-width) 100%;
+    mask-image: var(--mask-image-content), var(--mask-image-scrollbar);
+    mask-position: 0 0, 100% 0;
+    mask-repeat: no-repeat, no-repeat;
+}
+
+.showroom-location-container::-webkit-scrollbar-thumb {
+    background: radial-gradient(circle farthest-corner, white 0%, white 50%, transparent 50%, transparent 100%) no-repeat;
+    background-size: auto var(--mask-height);
+    background-position: center;
+}
+
+.showroom-location-container::-webkit-scrollbar {
+  width: var(--mask-height);
+}
+
+.showroom-location-container::-webkit-scrollbar-track {
+  background: linear-gradient(to right, transparent 0, transparent 45%, rgba(0,0,0,.20) 45%, rgba(0,0,0,.20) 55%, transparent 55%, transparent 100%);
+}
+
+
+.orange-circle-left-mid{
+    position: absolute;
+    left: -400px;
+    top: 8%;
+}
+
+.news-card{
+    border-radius: 8px;
+}
+
+.news-card-img-container{
+    min-height: 170px;
+    overflow: hidden;
+}
+
+.reach-out-section{
+    min-height: 500px;
+}
+
+.reach-out-section-mascot{
+    max-width: 150px;
+}
+
+.reach-out-img{
+    max-width: 675px;
+    top: 50px;
+    left: -25px;
+}
+
+.reach-out{
+    max-width: 700px;
+}
+
+.reach-out-input-container {
+    position: relative;
+    width: auto;
+}
+
+.reach-out-input-container>.reach-out-input{
+    width: 100%;
+}
+
+.reach-out-input {
+    border: 1px solid #fff;
+    background-color: rgba(255, 255, 255, 0.455);
+    padding: 15px 20px; 
+    padding-left: 20px;
+    border-radius: 100px;
+    line-height: 1;
+    box-sizing: border-box;
+    outline: none;
+}
+
+
+.reach-out-input-with-submit{
+    padding-right: 145px; 
+}
+
+.reach-out-input::placeholder{
+    color: inherit;
+}
+
+.reach-out-button {
+    position: absolute;
+    right: 5px; 
+    top: 5px;
+    bottom: 5px;
+    border: 0;
+    background: #fff;
+    outline: none;
+    margin: 0;
+    padding: 0 30px;
+    border-radius: 100px;
+    z-index: 2;
+}
+
+.orange-circle-right-mid{
+    position: absolute;
+    right: -125px;
+    top: 10px;
+}
+
+.footer-link{
+    opacity: 0.5;
+}
+
+.footer-link:hover{
+    opacity: 1;
+}
+
+.footer-location{
+    opacity: 0.5;
+}
+
+.social-circle-link{
+    min-width: 35px;
+    min-height: 35px;
+    margin-right: 1rem;
+}
+
+@media (min-width:768px) {
+    html{
+        font-size: 16px;
+    }
+
+    .hero-section{
+        background-position-x: 100%;
+    }
+
+    .testimony-img-container{
+        width: 50%;
+    }
+
+    .testimony-container{
+        width: 50%;
+        padding: 0px;
+    }
+
+    .testimony-container-inner{
+        width: 75%;
+    }
+
+    .showroom-location-container{
+        max-height: 400px;
+    }
+}
+
+@media (min-width:992px){
+    .sales-section-mascot{
+        right: 12%;
+    }
+}

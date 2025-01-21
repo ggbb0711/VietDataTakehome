@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ABC Sport</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="sticky-top">
+        <div class="py-3 bg-primary">
+            <div class="container-md row m-auto align-items-center">
+                <div class="col-2">
+                    <a href="#" class="navbar-brand col d-block" style="max-width: 150px;">
+                        <img class="w-100" src="./assets/images/Icon.png" alt="icon" >
+                    </a>
+                </div>
+                <div class="col">
+                    <form class="d-flex flex-row position-relative col">
+                        <input type="search" class="form-control" id="searchItem" placeholder="Search...">
+                        <button class="btn border-0 position-absolute end-0" type="submit">
+                            <svg width="20" height="20" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.8268 0C4.86015 0 0 4.86015 0 10.8268C0 16.7934 4.86015 21.6536 10.8268 21.6536C13.4214 21.6536 15.8043 20.7322 17.6718 19.2028L24.1361 25.6671C24.2359 25.771 24.3554 25.854 24.4876 25.9111C24.6199 25.9683 24.7622 25.9985 24.9062 25.9999C25.0502 26.0014 25.1931 25.9741 25.3265 25.9197C25.4598 25.8652 25.581 25.7847 25.6829 25.6829C25.7847 25.581 25.8652 25.4598 25.9197 25.3265C25.9741 25.1931 26.0014 25.0502 25.9999 24.9062C25.9985 24.7622 25.9683 24.6199 25.9111 24.4876C25.854 24.3554 25.771 24.2359 25.6671 24.1361L19.2028 17.6718C20.7322 15.8043 21.6536 13.4214 21.6536 10.8268C21.6536 4.86015 16.7934 0 10.8268 0ZM10.8268 2.16536C15.6232 2.16536 19.4882 6.03039 19.4882 10.8268C19.4882 15.6232 15.6232 19.4882 10.8268 19.4882C6.03039 19.4882 2.16536 15.6232 2.16536 10.8268C2.16536 6.03039 6.03039 2.16536 10.8268 2.16536Z" fill="#05141F"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+                <div class="col">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <div class="d-none d-md-flex gap-2">
+                            <span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19.7273 20.4471C19.2715 19.1713 18.2671 18.0439 16.87 17.2399C15.4728 16.4358 13.761 16 11.9999 16C10.2388 16 8.52693 16.4358 7.12978 17.2399C5.73263 18.0439 4.72826 19.1713 4.27246 20.4471" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12Z" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                </svg>                        
+                            </span>
+                            <span class="text-light">Đăng Ký/Đăng Nhập</span>
+                            <span>
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1H2.62563C3.193 1 3.47669 1 3.70214 1.12433C3.79511 1.17561 3.87933 1.24136 3.95162 1.31912C4.12692 1.50769 4.19573 1.7829 4.33333 2.33333L4.51493 3.05972C4.616 3.46402 4.66654 3.66617 4.74455 3.83576C5.01534 4.42449 5.5546 4.84553 6.19144 4.96546C6.37488 5 6.58326 5 7 5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M15.0001 14H4.55097C4.40477 14 4.33168 14 4.27622 13.9938C3.68863 13.928 3.28611 13.3695 3.40951 12.7913C3.42115 12.7367 3.44427 12.6674 3.4905 12.5287C3.54183 12.3747 3.56749 12.2977 3.59585 12.2298C3.88613 11.5342 4.54283 11.0608 5.29454 11.0054C5.36796 11 5.44912 11 5.61143 11H11.0001" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M11.5279 11H7.97425C6.75833 11 6.15037 11 5.68142 10.7246C5.48338 10.6083 5.30684 10.4588 5.15956 10.2825C4.81082 9.8652 4.71087 9.2655 4.51098 8.0662C4.30844 6.85093 4.20717 6.2433 4.44758 5.79324C4.54794 5.60536 4.68717 5.44101 4.85599 5.31113C5.2604 5 5.87641 5 7.10845 5H13.7639C15.2143 5 15.9395 5 16.2326 5.47427C16.5257 5.94854 16.2014 6.59717 15.5528 7.8944L15.1056 8.7889C14.5677 9.8647 14.2987 10.4026 13.8154 10.7013C13.3321 11 12.7307 11 11.5279 11Z" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M14 18C14.5523 18 15 17.5523 15 17C15 16.4477 14.5523 16 14 16C13.4477 16 13 16.4477 13 17C13 17.5523 13.4477 18 14 18Z" fill="white"/>
+                                    <path d="M6 18C6.55228 18 7 17.5523 7 17C7 16.4477 6.55228 16 6 16C5.44772 16 5 16.4477 5 17C5 17.5523 5.44772 18 6 18Z" fill="white"/>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="d-md-none navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#collapsableHeader"
+                            role="button" aria-expanded="false" aria-controls="collapsableHeader">
+                            <span>MENU</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-md py-0 bg-dark">
+            <div class="container-md">
+                <ul class="gap-4 m-0 p-0 collapse navbar-collapse" id="collapsableHeader">
+                    <li class="nav-item py-2 header-link">
+                        <a href="#footerSection" class="nav-link">Về chúng tôi</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <span class="nav-link py-2" id="productHeaderDropDown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="text-light">Sản phẩm</span>
+                            <span>
+                                <svg width="15" height="7" viewBox="0 0 15 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.99979 7C6.76614 7.00046 6.5397 6.91908 6.35979 6.77L0.359788 1.77C0.155571 1.60026 0.0271464 1.35635 0.00276666 1.09192C-0.0216131 0.827498 0.0600488 0.564217 0.229787 0.360001C0.399526 0.155784 0.643437 0.02736 0.907864 0.0029803C1.17229 -0.0213994 1.43557 0.060262 1.63979 0.230001L6.99979 4.71L12.3598 0.390001C12.4621 0.306935 12.5798 0.244904 12.7061 0.207472C12.8324 0.17004 12.9649 0.157946 13.096 0.171886C13.227 0.185825 13.354 0.225522 13.4696 0.288695C13.5853 0.351869 13.6873 0.437274 13.7698 0.540001C13.8614 0.642822 13.9307 0.763449 13.9735 0.894322C14.0163 1.0252 14.0316 1.1635 14.0185 1.30056C14.0053 1.43762 13.964 1.5705 13.8971 1.69085C13.8303 1.81121 13.7392 1.91646 13.6298 2L7.62979 6.83C7.4447 6.95552 7.22289 7.01537 6.99979 7Z" fill="#CCCCCC"/>
+                                </svg>
+                            </span>
+                        </span>
+                        <ul class="dropdown-menu dropdown-menu-dark border-0 z-2" aria-labelledby="productHeaderDropDown">
+                            <li>
+                                <a class="dropdown-item" href="#productSection">Sản phẩm a</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#productSection">Sản phẩm b</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#productSection">Sản phẩm c</a>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#productSection">Xem tất cả</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item py-2 header-link">
+                        <a href="#salesSection" class="nav-link">Khuyến mãi</a>
+                    </li>
+                    <li class="nav-item py-2 header-link">
+                        <a href="#newsSection" class="nav-link">Tin tức</a>
+                    </li>
+                    <li class="nav-item py-2 header-link">
+                        <a href="#contactSection" class="nav-link">Liên hệ</a>
+                    </li>
+                    <li class="text-primary py-2 d-md-none mb-2 header-link">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.3332 28V21.3333C19.3332 20.5969 18.7362 20 17.9998 20H13.9998C13.2635 20 12.6665 20.5969 12.6665 21.3333V28" stroke="#FA5A0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6.6665 14.6667V22.6667C6.6665 25.1808 6.6665 26.4379 7.44756 27.2189C8.2286 28 9.48568 28 11.9998 28H19.9998C22.514 28 23.771 28 24.5521 27.2189C25.3332 26.4379 25.3332 25.1808 25.3332 22.6667V14.6667" stroke="#FA5A0A" stroke-width="2"/>
+                            <path d="M6.1617 6.01991C6.40422 5.04983 6.52547 4.56479 6.88715 4.28239C7.24884 4 7.7488 4 8.74874 4H23.2512C24.2512 4 24.7512 4 25.1128 4.28239C25.4745 4.56479 25.5957 5.04983 25.8383 6.01991L27.4431 12.4392C27.5723 12.9557 27.6368 13.2139 27.6225 13.4237C27.5856 13.9676 27.2213 14.4343 26.7025 14.602C26.5025 14.6667 26.2301 14.6667 25.6855 14.6667C24.9745 14.6667 24.6192 14.6667 24.3207 14.5971C23.4844 14.4023 22.7931 13.8167 22.4633 13.0237C22.3457 12.7407 22.2885 12.3981 22.1744 11.7128C22.1424 11.521 22.1264 11.4251 22.1083 11.3999C22.0551 11.3259 21.9449 11.3259 21.8917 11.3999C21.8736 11.4251 21.8576 11.521 21.8256 11.7128L21.7169 12.3651C21.7055 12.4342 21.6996 12.4688 21.6939 12.4991C21.4585 13.734 20.3928 14.6369 19.136 14.666C19.1052 14.6667 19.0701 14.6667 19 14.6667C18.9299 14.6667 18.8948 14.6667 18.864 14.666C17.6072 14.6369 16.5415 13.734 16.3061 12.4991C16.3004 12.4688 16.2945 12.4342 16.2831 12.3651L16.1744 11.7128C16.1424 11.521 16.1264 11.4251 16.1083 11.3999C16.0551 11.3259 15.9449 11.3259 15.8917 11.3999C15.8736 11.4251 15.8576 11.521 15.8256 11.7128L15.7169 12.3651C15.7055 12.4342 15.6996 12.4688 15.6939 12.4991C15.4585 13.734 14.3928 14.6369 13.136 14.666C13.1052 14.6667 13.0701 14.6667 13 14.6667C12.9299 14.6667 12.8948 14.6667 12.864 14.666C11.6072 14.6369 10.5414 13.734 10.3061 12.4991C10.3004 12.4688 10.2946 12.4342 10.2831 12.3651L10.1743 11.7128C10.1424 11.521 10.1264 11.4251 10.1083 11.3999C10.0551 11.3259 9.94491 11.3259 9.89171 11.3999C9.87359 11.4251 9.85761 11.521 9.82565 11.7128C9.71143 12.3981 9.65432 12.7407 9.53666 13.0237C9.20699 13.8167 8.51567 14.4023 7.67935 14.5971C7.38084 14.6667 7.0254 14.6667 6.31455 14.6667C5.76983 14.6667 5.49746 14.6667 5.29742 14.602C4.77871 14.4343 4.41438 13.9676 4.37743 13.4237C4.36319 13.2139 4.42775 12.9557 4.55687 12.4392L6.1617 6.01991Z" stroke="#FA5A0A" stroke-width="2"/>
+                        </svg>
+                        <a href="#showroomSection">120 Showroom toàn quốc</a>
+                    </li>
+                </ul>
+                <span class="text-primary py-2 d-none d-md-block header-link">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.3332 28V21.3333C19.3332 20.5969 18.7362 20 17.9998 20H13.9998C13.2635 20 12.6665 20.5969 12.6665 21.3333V28" stroke="#FA5A0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6.6665 14.6667V22.6667C6.6665 25.1808 6.6665 26.4379 7.44756 27.2189C8.2286 28 9.48568 28 11.9998 28H19.9998C22.514 28 23.771 28 24.5521 27.2189C25.3332 26.4379 25.3332 25.1808 25.3332 22.6667V14.6667" stroke="#FA5A0A" stroke-width="2"/>
+                        <path d="M6.1617 6.01991C6.40422 5.04983 6.52547 4.56479 6.88715 4.28239C7.24884 4 7.7488 4 8.74874 4H23.2512C24.2512 4 24.7512 4 25.1128 4.28239C25.4745 4.56479 25.5957 5.04983 25.8383 6.01991L27.4431 12.4392C27.5723 12.9557 27.6368 13.2139 27.6225 13.4237C27.5856 13.9676 27.2213 14.4343 26.7025 14.602C26.5025 14.6667 26.2301 14.6667 25.6855 14.6667C24.9745 14.6667 24.6192 14.6667 24.3207 14.5971C23.4844 14.4023 22.7931 13.8167 22.4633 13.0237C22.3457 12.7407 22.2885 12.3981 22.1744 11.7128C22.1424 11.521 22.1264 11.4251 22.1083 11.3999C22.0551 11.3259 21.9449 11.3259 21.8917 11.3999C21.8736 11.4251 21.8576 11.521 21.8256 11.7128L21.7169 12.3651C21.7055 12.4342 21.6996 12.4688 21.6939 12.4991C21.4585 13.734 20.3928 14.6369 19.136 14.666C19.1052 14.6667 19.0701 14.6667 19 14.6667C18.9299 14.6667 18.8948 14.6667 18.864 14.666C17.6072 14.6369 16.5415 13.734 16.3061 12.4991C16.3004 12.4688 16.2945 12.4342 16.2831 12.3651L16.1744 11.7128C16.1424 11.521 16.1264 11.4251 16.1083 11.3999C16.0551 11.3259 15.9449 11.3259 15.8917 11.3999C15.8736 11.4251 15.8576 11.521 15.8256 11.7128L15.7169 12.3651C15.7055 12.4342 15.6996 12.4688 15.6939 12.4991C15.4585 13.734 14.3928 14.6369 13.136 14.666C13.1052 14.6667 13.0701 14.6667 13 14.6667C12.9299 14.6667 12.8948 14.6667 12.864 14.666C11.6072 14.6369 10.5414 13.734 10.3061 12.4991C10.3004 12.4688 10.2946 12.4342 10.2831 12.3651L10.1743 11.7128C10.1424 11.521 10.1264 11.4251 10.1083 11.3999C10.0551 11.3259 9.94491 11.3259 9.89171 11.3999C9.87359 11.4251 9.85761 11.521 9.82565 11.7128C9.71143 12.3981 9.65432 12.7407 9.53666 13.0237C9.20699 13.8167 8.51567 14.4023 7.67935 14.5971C7.38084 14.6667 7.0254 14.6667 6.31455 14.6667C5.76983 14.6667 5.49746 14.6667 5.29742 14.602C4.77871 14.4343 4.41438 13.9676 4.37743 13.4237C4.36319 13.2139 4.42775 12.9557 4.55687 12.4392L6.1617 6.01991Z" stroke="#FA5A0A" stroke-width="2"/>
+                    </svg>
+                    <a href="#showroomSection">120 Showroom toàn quốc</a>
+                </span>
+            </div>
+        </nav>
+    </header>
+    <!-- Header end -->
+
+    <main>
+        <!-- Hero start -->
+        <section id="heroSectionCarousel" class="carousel slide hero-section position-relative" data-bs-ride="carousel" data-bs-touch="true">
+            <div class="hero-carousel-indicators carousel-indicators">
+                <button class="hero-section-indicator active" type="button" data-bs-target="#heroSectionCarousel" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
+                <button class="hero-section-indicator" type="button" data-bs-target="#heroSectionCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button class="hero-section-indicator" type="button" data-bs-target="#heroSectionCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button class="hero-section-indicator" type="button" data-bs-target="#heroSectionCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner h-100">
+                <div class="carousel-item hero-section-bg-example active h-100">
+                    <div class="container-md position-relative h-100">
+                        <div class="vertical-center d-flex align-items-center gap-5">
+                            <div>
+                                <h1 class="hero-section-heading">From <span class="text-primary">Stress</span>
+                                    <br>
+                                    To <span class="text-primary">Serenity</span>
+                                </h1>
+                                <button class="button button-primary bg-primary text-light rounded-pill py-2 px-4 border-0 mt-3">
+                                    Discover more 
+                                    <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21.7439 6.40866L15.6014 0.243668C15.4362 0.0852305 15.2154 -0.0022176 14.9865 4.27524e-05C14.7575 0.0023031 14.5386 0.0940923 14.3765 0.255762C14.2144 0.417432 14.122 0.636135 14.1191 0.865056C14.1162 1.09398 14.2031 1.31492 14.3611 1.4806L18.9778 6.11337H1.87597C1.75663 6.10605 1.63706 6.12324 1.52461 6.16388C1.41217 6.20451 1.30923 6.26773 1.22214 6.34964C1.13505 6.43155 1.06564 6.53043 1.0182 6.64017C0.970763 6.74991 0.946289 6.8682 0.946289 6.98775C0.946289 7.10731 0.970763 7.2256 1.0182 7.33534C1.06564 7.44508 1.13505 7.54395 1.22214 7.62586C1.30923 7.70777 1.41217 7.77099 1.52461 7.81162C1.63706 7.85226 1.75663 7.86945 1.87597 7.86214H19.0468L14.3644 12.4916C14.2753 12.5708 14.2033 12.6673 14.1529 12.7753C14.1024 12.8832 14.0744 13.0004 14.0708 13.1195C14.0671 13.2386 14.0878 13.3572 14.1316 13.4681C14.1754 13.5789 14.2413 13.6797 14.3253 13.7642C14.4094 13.8486 14.5098 13.9151 14.6204 13.9595C14.7311 14.0038 14.8496 14.0251 14.9687 14.0221C15.0879 14.0191 15.2051 13.9918 15.3134 13.9419C15.4216 13.892 15.5185 13.8205 15.5982 13.7318L21.7407 7.64887C21.8222 7.5675 21.8869 7.47084 21.9311 7.36444C21.9752 7.25803 21.9979 7.14396 21.9979 7.02876C21.9979 6.91356 21.9752 6.7995 21.9311 6.69309C21.8869 6.58668 21.8222 6.49003 21.7407 6.40866H21.7439Z" fill="white"/>
+                                    </svg>
+                                </button>                    
+                            </div>
+                            <img class="d-md-block d-none hero-section-mascot" src="./assets/images/HeroSectionMascot.png" alt="hero-section-mascot">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item hero-section-bg-example h-100">
+                    <div class="container-md position-relative h-100">
+                        <div class="vertical-center d-flex align-items-center gap-5">
+                            <div>
+                                <h1 class="hero-section-heading">From <span class="text-primary">Stress</span>
+                                    <br>
+                                    To <span class="text-primary">Serenity</span>
+                                </h1>
+                                <button class="button button-primary bg-primary text-light rounded-pill py-2 px-4 border-0 mt-3">
+                                    Discover more 
+                                    <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21.7439 6.40866L15.6014 0.243668C15.4362 0.0852305 15.2154 -0.0022176 14.9865 4.27524e-05C14.7575 0.0023031 14.5386 0.0940923 14.3765 0.255762C14.2144 0.417432 14.122 0.636135 14.1191 0.865056C14.1162 1.09398 14.2031 1.31492 14.3611 1.4806L18.9778 6.11337H1.87597C1.75663 6.10605 1.63706 6.12324 1.52461 6.16388C1.41217 6.20451 1.30923 6.26773 1.22214 6.34964C1.13505 6.43155 1.06564 6.53043 1.0182 6.64017C0.970763 6.74991 0.946289 6.8682 0.946289 6.98775C0.946289 7.10731 0.970763 7.2256 1.0182 7.33534C1.06564 7.44508 1.13505 7.54395 1.22214 7.62586C1.30923 7.70777 1.41217 7.77099 1.52461 7.81162C1.63706 7.85226 1.75663 7.86945 1.87597 7.86214H19.0468L14.3644 12.4916C14.2753 12.5708 14.2033 12.6673 14.1529 12.7753C14.1024 12.8832 14.0744 13.0004 14.0708 13.1195C14.0671 13.2386 14.0878 13.3572 14.1316 13.4681C14.1754 13.5789 14.2413 13.6797 14.3253 13.7642C14.4094 13.8486 14.5098 13.9151 14.6204 13.9595C14.7311 14.0038 14.8496 14.0251 14.9687 14.0221C15.0879 14.0191 15.2051 13.9918 15.3134 13.9419C15.4216 13.892 15.5185 13.8205 15.5982 13.7318L21.7407 7.64887C21.8222 7.5675 21.8869 7.47084 21.9311 7.36444C21.9752 7.25803 21.9979 7.14396 21.9979 7.02876C21.9979 6.91356 21.9752 6.7995 21.9311 6.69309C21.8869 6.58668 21.8222 6.49003 21.7407 6.40866H21.7439Z" fill="white"/>
+                                    </svg>
+                                </button>                    
+                            </div>
+                            <img class="d-md-block d-none hero-section-mascot" src="./assets/images/HeroSectionMascot.png" alt="hero-section-mascot">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item hero-section-bg-example h-100">
+                    <div class="container-md position-relative h-100">
+                        <div class="vertical-center d-flex align-items-center gap-5">
+                            <div>
+                                <h1 class="hero-section-heading">From <span class="text-primary">Stress</span>
+                                    <br>
+                                    To <span class="text-primary">Serenity</span>
+                                </h1>
+                                <button class="button button-primary bg-primary text-light rounded-pill py-2 px-4 border-0 mt-3">
+                                    Discover more 
+                                    <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21.7439 6.40866L15.6014 0.243668C15.4362 0.0852305 15.2154 -0.0022176 14.9865 4.27524e-05C14.7575 0.0023031 14.5386 0.0940923 14.3765 0.255762C14.2144 0.417432 14.122 0.636135 14.1191 0.865056C14.1162 1.09398 14.2031 1.31492 14.3611 1.4806L18.9778 6.11337H1.87597C1.75663 6.10605 1.63706 6.12324 1.52461 6.16388C1.41217 6.20451 1.30923 6.26773 1.22214 6.34964C1.13505 6.43155 1.06564 6.53043 1.0182 6.64017C0.970763 6.74991 0.946289 6.8682 0.946289 6.98775C0.946289 7.10731 0.970763 7.2256 1.0182 7.33534C1.06564 7.44508 1.13505 7.54395 1.22214 7.62586C1.30923 7.70777 1.41217 7.77099 1.52461 7.81162C1.63706 7.85226 1.75663 7.86945 1.87597 7.86214H19.0468L14.3644 12.4916C14.2753 12.5708 14.2033 12.6673 14.1529 12.7753C14.1024 12.8832 14.0744 13.0004 14.0708 13.1195C14.0671 13.2386 14.0878 13.3572 14.1316 13.4681C14.1754 13.5789 14.2413 13.6797 14.3253 13.7642C14.4094 13.8486 14.5098 13.9151 14.6204 13.9595C14.7311 14.0038 14.8496 14.0251 14.9687 14.0221C15.0879 14.0191 15.2051 13.9918 15.3134 13.9419C15.4216 13.892 15.5185 13.8205 15.5982 13.7318L21.7407 7.64887C21.8222 7.5675 21.8869 7.47084 21.9311 7.36444C21.9752 7.25803 21.9979 7.14396 21.9979 7.02876C21.9979 6.91356 21.9752 6.7995 21.9311 6.69309C21.8869 6.58668 21.8222 6.49003 21.7407 6.40866H21.7439Z" fill="white"/>
+                                    </svg>
+                                </button>                    
+                            </div>
+                            <img class="d-md-block d-none hero-section-mascot" src="./assets/images/HeroSectionMascot.png" alt="hero-section-mascot">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item hero-section-bg-example h-100">
+                    <div class="container-md position-relative h-100">
+                        <div class="vertical-center d-flex align-items-center gap-5">
+                            <div>
+                                <h1 class="hero-section-heading">From <span class="text-primary">Stress</span>
+                                    <br>
+                                    To <span class="text-primary">Serenity</span>
+                                </h1>
+                                <button class="button button-primary bg-primary text-light rounded-pill py-2 px-4 border-0 mt-3">
+                                    Discover more 
+                                    <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21.7439 6.40866L15.6014 0.243668C15.4362 0.0852305 15.2154 -0.0022176 14.9865 4.27524e-05C14.7575 0.0023031 14.5386 0.0940923 14.3765 0.255762C14.2144 0.417432 14.122 0.636135 14.1191 0.865056C14.1162 1.09398 14.2031 1.31492 14.3611 1.4806L18.9778 6.11337H1.87597C1.75663 6.10605 1.63706 6.12324 1.52461 6.16388C1.41217 6.20451 1.30923 6.26773 1.22214 6.34964C1.13505 6.43155 1.06564 6.53043 1.0182 6.64017C0.970763 6.74991 0.946289 6.8682 0.946289 6.98775C0.946289 7.10731 0.970763 7.2256 1.0182 7.33534C1.06564 7.44508 1.13505 7.54395 1.22214 7.62586C1.30923 7.70777 1.41217 7.77099 1.52461 7.81162C1.63706 7.85226 1.75663 7.86945 1.87597 7.86214H19.0468L14.3644 12.4916C14.2753 12.5708 14.2033 12.6673 14.1529 12.7753C14.1024 12.8832 14.0744 13.0004 14.0708 13.1195C14.0671 13.2386 14.0878 13.3572 14.1316 13.4681C14.1754 13.5789 14.2413 13.6797 14.3253 13.7642C14.4094 13.8486 14.5098 13.9151 14.6204 13.9595C14.7311 14.0038 14.8496 14.0251 14.9687 14.0221C15.0879 14.0191 15.2051 13.9918 15.3134 13.9419C15.4216 13.892 15.5185 13.8205 15.5982 13.7318L21.7407 7.64887C21.8222 7.5675 21.8869 7.47084 21.9311 7.36444C21.9752 7.25803 21.9979 7.14396 21.9979 7.02876C21.9979 6.91356 21.9752 6.7995 21.9311 6.69309C21.8869 6.58668 21.8222 6.49003 21.7407 6.40866H21.7439Z" fill="white"/>
+                                    </svg>
+                                </button>                    
+                            </div>
+                            <img class="d-md-block d-none hero-section-mascot" src="./assets/images/HeroSectionMascot.png" alt="hero-section-mascot">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Hero end -->
+
+        <!-- Sale start -->
+        <section class="bg-secondary position-relative overflow-hidden section-padding" id="salesSection">
+            <span class="orange-circle-top-right">
+                <svg width="712" height="712" viewBox="0 0 712 712" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="356" cy="356" r="281" stroke="#FA5A0A" stroke-width="150"/>
+                </svg>
+            </span>
+            <div class="container-md">
+                <div class="m-auto z-2 position-relative d-flex justify-content-center align-items-center gap-5">
+                    <div class="text-center">
+                        <h2 class="text-primary section-header">
+                            Flash Sale Mùa Vu Lan
+                        </h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin <br>
+                                lobortis sed sapien in pretium. Donec tincidunt, quam.</p>
+                    </div>
+                    <img class="sales-section-mascot d-md-block d-none" src="./assets/images/SalesSectionMascot.png" alt="sales-section-mascot">
+                </div>
+
+                <div id="salesCarousel" class="carousel d-flex gap-2 mt-5">
+                    <div class="product-card">
+                        <div class="product-card-img-container">
+                            <div class="product-card-sales-off bg-primary">24%</div>
+                            <img class="product-card-img" src="./assets/images/SaleImg1.png" alt="product-Ghe-Message-ABCSport-A35" class="product-card-img">
+                        </div>
+                        <p>Ghế massage ABCSport A35</p>
+                        <p>16.900.000 đ</p>
+                        <p class="text-primary">12.900.000 đ</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-card-img-container">
+                            <div class="product-card-sales-off bg-primary">24%</div>
+                            <img class="product-card-img" src="./assets/images/SaleImg1.png" alt="product-Ghe-Message-ABCSport-A35" class="product-card-img">
+                        </div>
+                        <p>Ghế massage ABCSport A35</p>
+                        <p>16.900.000 đ</p>
+                        <p class="text-primary">12.900.000 đ</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-card-img-container">
+                            <div class="product-card-sales-off bg-primary">24%</div>
+                            <img class="product-card-img" src="./assets/images/SaleImg1.png" alt="product-Ghe-Message-ABCSport-A35" class="product-card-img">
+                        </div>
+                        <p>Ghế massage ABCSport A35</p>
+                        <p>16.900.000 đ</p>
+                        <p class="text-primary">12.900.000 đ</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-card-img-container">
+                            <div class="product-card-sales-off bg-primary">24%</div>
+                            <img class="product-card-img" src="./assets/images/SaleImg1.png" alt="product-Ghe-Message-ABCSport-A35" class="product-card-img">
+                        </div>
+                        <p>Ghế massage ABCSport A35</p>
+                        <p>16.900.000 đ</p>
+                        <p class="text-primary">12.900.000 đ</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Sale end -->
+
+        <!-- Product categories -->
+        <section class="section-padding overflow-hidden position-relative" id="productSection">
+            <span class="orange-circle-bot-left">
+                <svg width="712" height="712" viewBox="0 0 712 712" fill="none" xmlns="http://www.w3.org/2000/svg" >
+                    <circle cx="356" cy="356" r="281" stroke="#FA5A0A" stroke-width="150"/>
+                </svg>
+            </span>
+            <div class="container-md position-relative">
+                <div class="text-center d-flex align-items-center gap-2 justify-content-center">
+                    <img class="section-header-icon" src="./assets/images/Quality.png" alt="quality-product">
+                    <h2 class="section-header text-primary"> Danh mục sản phẩm</h2>
+                </div>
+                <div class="overflow-hidden mw-100 d-flex gap-5">
+                    <div class="product-category">
+                        <img class=" position-absolute top-0" src="./assets/images/GheMassageCategory.png" alt="ghe-meassage-category">
+                        <div>
+                            <p>Ghế Massage</p>
+                            <p class="fs-6 fw-light">10 sản phẩm</p>
+                        </div>
+                    </div>
+                    <div class="product-category">
+                        <img class=" position-absolute top-0" src="./assets/images/GheMassageCategory.png" alt="ghe-meassage-category">
+                        <div>
+                            <p>Ghế Massage</p>
+                            <p class="fs-6 fw-light">10 sản phẩm</p>
+                        </div>
+                    </div>
+                    <div class="product-category">
+                        <img class=" position-absolute top-0" src="./assets/images/MayChayBoCategory.png" alt="may-chay-bo-category">
+                        <div>
+                            <p>Máy Chạy Bộ</p>
+                            <p class="fs-6 fw-light">15 sản phẩm</p>
+                        </div>
+                    </div>
+                    <div class="product-category">
+                        <img class=" position-absolute top-0" src="./assets/images/XeDapCategory.png" alt="xe-dap-category">
+                        <div>
+                            <p>Xe Đạp</p>
+                            <p class="fs-6 fw-light">15 sản phẩm</p>
+                        </div>
+                    </div>
+                    <div class="product-category">
+                        <img class=" position-absolute top-0" src="./assets/images/XeDapCategory.png" alt="xe-dap-category">
+                        <div>
+                            <p>Xe Đạp</p>
+                            <p class="fs-6 fw-light">15 sản phẩm</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 d-flex justify-content-center">
+                    <button class="button button-primary bg-primary text-light rounded-pill py-3 px-5 border-0 mt-3">
+                        <span class="me-2">Xem tất cả</span>
+                        <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.7439 6.40866L15.6014 0.243668C15.4362 0.0852305 15.2154 -0.0022176 14.9865 4.27524e-05C14.7575 0.0023031 14.5386 0.0940923 14.3765 0.255762C14.2144 0.417432 14.122 0.636135 14.1191 0.865056C14.1162 1.09398 14.2031 1.31492 14.3611 1.4806L18.9778 6.11337H1.87597C1.75663 6.10605 1.63706 6.12324 1.52461 6.16388C1.41217 6.20451 1.30923 6.26773 1.22214 6.34964C1.13505 6.43155 1.06564 6.53043 1.0182 6.64017C0.970763 6.74991 0.946289 6.8682 0.946289 6.98775C0.946289 7.10731 0.970763 7.2256 1.0182 7.33534C1.06564 7.44508 1.13505 7.54395 1.22214 7.62586C1.30923 7.70777 1.41217 7.77099 1.52461 7.81162C1.63706 7.85226 1.75663 7.86945 1.87597 7.86214H19.0468L14.3644 12.4916C14.2753 12.5708 14.2033 12.6673 14.1529 12.7753C14.1024 12.8832 14.0744 13.0004 14.0708 13.1195C14.0671 13.2386 14.0878 13.3572 14.1316 13.4681C14.1754 13.5789 14.2413 13.6797 14.3253 13.7642C14.4094 13.8486 14.5098 13.9151 14.6204 13.9595C14.7311 14.0038 14.8496 14.0251 14.9687 14.0221C15.0879 14.0191 15.2051 13.9918 15.3134 13.9419C15.4216 13.892 15.5185 13.8205 15.5982 13.7318L21.7407 7.64887C21.8222 7.5675 21.8869 7.47084 21.9311 7.36444C21.9752 7.25803 21.9979 7.14396 21.9979 7.02876C21.9979 6.91356 21.9752 6.7995 21.9311 6.69309C21.8869 6.58668 21.8222 6.49003 21.7407 6.40866H21.7439Z" fill="white"/>
+                        </svg>
+                    </button>   
+                </div>
+            </div>
+        </section>
+        <!-- Product categories end -->
+
+        <!-- Best seller start -->
+        <section class="section-padding bg-secondary" id="bestSellerSection">
+            <div class="container-md">
+                <div class="m-auto">
+                    <div class="text-center">
+                        <div class="d-flex align-items-center gap-2 justify-content-center">
+                            <img class="section-header-icon" src="./assets/images/BestSeller.png" alt="best-seller-icon">
+                            <h2 class="text-primary section-header">
+                                Ghế Massage ABCSport
+                            </h2>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin <br>
+                                lobortis sed sapien in pretium. Donec tincidunt, quam.</p>
+                    </div>
+                </div>
+
+                <div id="salesCarousel" class="carousel d-flex gap-2 mt-5">
+                    <div class="product-card">
+                        <div class="product-card-img-container">
+                            <div class="product-card-sales-off bg-primary">-24%</div>
+                            <img class="product-card-img" src="./assets/images/SportMassage1.png" alt="product-Ghe-Message-ABCSport-A35" class="product-card-img">
+                        </div>
+                        <p>Ghế massage ABCSport A35</p>
+                        <p>16.900.000 đ</p>
+                        <p class="text-primary">12.900.000 đ</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-card-img-container">
+                            <div class="product-card-sales-off bg-primary">-24%</div>
+                            <img class="product-card-img" src="./assets/images/SportMassage2.png" alt="product-Ghe-Message-ABCSport-A35" class="product-card-img">
+                        </div>
+                        <p>Ghế massage ABCSport A35</p>
+                        <p>16.900.000 đ</p>
+                        <p class="text-primary">12.900.000 đ</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-card-img-container">
+                            <div class="product-card-sales-off bg-primary">-24%</div>
+                            <img class="product-card-img" src="./assets/images/SportMassage3.png" alt="product-Ghe-Message-ABCSport-A35" class="product-card-img">
+                        </div>
+                        <p>Ghế massage ABCSport A35</p>
+                        <p>16.900.000 đ</p>
+                        <p class="text-primary">12.900.000 đ</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Best seller end -->
+
+        <!-- Testimony start -->
+        <section class="bg-primary-subtle d-flex flex-column-reverse flex-md-row position-relative overflow-hidden"  data-bs-touch="true" id="testimonySection">
+            <span class="orange-circle-bot-mid">
+                <svg width="712" height="712" viewBox="0 0 712 712" fill="none" xmlns="http://www.w3.org/2000/svg" >
+                    <circle cx="356" cy="356" r="281" stroke="#FA5A0A" stroke-width="150"/>
+                </svg>
+            </span>
+            <div class="flex-fill d-flex justify-content-center text-light align-items-center testimony-container position-relative">
+                <div class="container-md testimony-container-inner py-2">
+                    <h2 class="section-header">Khách hàng nói gì về ABCSport</h2>
+                    <div class="carousel slide" id="testimonyCarousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="testimony-card  d-flex flex-column">
+                                    <div class="flex-fill">
+                                        “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lobortis erat posuere, 
+                                        tincidunt sem at, sagittis dolor. Sed malesuada orci erat, ut interdum lorem rhoncus eu. 
+                                        Donec justo urna, mattis non maximus.”
+                                    </div>
+                                    <div class="">
+                                        <p class="fs-2 fw-semibold m-0">Nikky Kimso</p>
+                                        <p>Customer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item ">
+                                <div class="testimony-card  d-flex flex-column">
+                                    <div class="flex-fill">
+                                        “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lobortis erat posuere, 
+                                        tincidunt sem at, sagittis dolor. Sed malesuada orci erat, ut interdum lorem rhoncus eu. 
+                                        Donec justo urna, mattis non maximus.”
+                                    </div>
+                                    <div class="">
+                                        <p class="fs-2 fw-semibold m-0">Nikky Kimso</p>
+                                        <p>Customer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item ">
+                                <div class="testimony-card  d-flex flex-column">
+                                    <div class="flex-fill">
+                                        “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lobortis erat posuere, 
+                                        tincidunt sem at, sagittis dolor. Sed malesuada orci erat, ut interdum lorem rhoncus eu. 
+                                        Donec justo urna, mattis non maximus.”
+                                    </div>
+                                    <div class="">
+                                        <p class="fs-2 fw-semibold m-0">Nikky Kimso</p>
+                                        <p>Customer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-3 justify-content-end">
+                            <svg type="button" data-bs-target="#testimonyCarousel" data-bs-slide="prev" width="64" height="20" viewBox="0 0 64 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M64 9.92627L1 9.92628" stroke="white" stroke-width="2" stroke-miterlimit="10"/>
+                                <path d="M10 0.852459L0.999999 9.92623L10 19" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linejoin="bevel"/>
+                            </svg>
+                            <svg type="button" data-bs-target="#testimonyCarousel" data-bs-slide="next" width="64" height="20" viewBox="0 0 64 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 9.92627H63" stroke="white" stroke-width="2" stroke-miterlimit="10"/>
+                                <path d="M54 19.0001L63 9.92631L54 0.852539" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linejoin="bevel"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimony-img-container">
+                <img class="w-100" src="./assets/images/TestimonyImg.png" alt="testimony-img">
+            </div>
+        </section>
+        <!-- Testimony end -->
+
+        <!-- Showroom section -->
+        <section class="section-padding bg-secondary position-relative overflow-hidden" id="showroomSection">
+            <span class="orange-circle-left-mid z-2">
+                <svg width="598" height="599" viewBox="0 0 598 599" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M534 299.22C534 429.007 428.787 534.22 299 534.22C169.213 534.22 64 429.007 64 299.22C64 169.433 169.213 64.2202 299 64.2202C428.787 64.2202 534 169.433 534 299.22Z" stroke="#FA5A0A" stroke-width="128"/>
+                </svg>
+            </span>
+            <div class="container-md gx-5 row position-relative mx-auto">
+                <div class="showroom-img-container col-md-6 col-12">
+                    <img class="mb-4 w-100" src="./assets/images/Showroom1.png" alt="showroomExample1">
+                    <img class="w-100" src="./assets/images/Showroom2.png" alt="showroomExample2">
+                </div>
+                <div class="col-md-6 col z-3 d-flex flex-column align-items-center align-items-md-start">
+                    <h2 class="section-header text-primary">120 Showroom Toàn Quốc</h2>
+                    
+                    
+                    <div class="flex-fill d-flex flex-column">
+                        <div class="row position-relative ps-3" id="showroomShiftingNav">
+                            <span class="shifting-underline border-primary"></span>
+                            <p class="col-auto showroom-nav active">Hà Nội</p>
+                            <p class="col-auto showroom-nav">Hồ Chí Minh</p>
+                            <p class="col-auto showroom-nav">Miền Bắc</p>
+                            <p class="col-auto showroom-nav">Miền Trung</p>
+                            <p class="col-auto showroom-nav">Miền Nam</p>
+                        </div>
+                        <ul class="showroom-location-container flex-fill pe-3">
+                            <li>
+                                <p class="text-primary fw-bold mb-1 fs-5">ABCSport Đống Đa</p>
+                                <p class="m-0">94 Nguyễn Lương Bằng, Phường Nam Đồng, Quận Đống Đa, Hà Nội</p>
+                                <p class="m-0">Điện thoại: (024) 6259 1760</p>
+                                <p class="m-0"><a class="text-primary link-underline" href="#">Xem Bản Đồ</a> (Có chỗ đậu xe)</p>
+                            </li>
+                            <li>
+                                <p class="text-primary fw-bold mb-1 fs-5 mt-5">ABCSport Hà Đông</p>
+                                <p class="m-0">96 Lê Trọng Tấn, P. La Khê, Q. Hà Đông, Hà Nội</p>
+                                <p class="m-0">Điện thoại: (024) 6296 93 94</p>
+                                <p class="m-0"><a class="text-primary link-underline" href="#">Xem Bản Đồ</a> (Có chỗ đậu xe)</p>
+                            </li>
+                            <li>
+                                <p class="text-primary fw-bold mb-1 fs-5 mt-5">ABCSport Long Biên</p>
+                                <p class="m-0">575-577 Nguyễn Văn Cừ, Tổ 16, Phường Gia Thuỵ, Quận Long Biên, Hà Nội</p>
+                                <p class="m-0">Điện thoại: (024) 6672 2738</p>
+                                <p class="m-0"><a class="text-primary link-underline" href="#">Xem Bản Đồ</a> (Có chỗ đậu xe)</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button class="button button-primary bg-primary text-light rounded-pill py-3 px-5 border-0 mt-3 ">
+                        <span class="me-2">Xem tất cả</span>
+                        <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.7439 6.40866L15.6014 0.243668C15.4362 0.0852305 15.2154 -0.0022176 14.9865 4.27524e-05C14.7575 0.0023031 14.5386 0.0940923 14.3765 0.255762C14.2144 0.417432 14.122 0.636135 14.1191 0.865056C14.1162 1.09398 14.2031 1.31492 14.3611 1.4806L18.9778 6.11337H1.87597C1.75663 6.10605 1.63706 6.12324 1.52461 6.16388C1.41217 6.20451 1.30923 6.26773 1.22214 6.34964C1.13505 6.43155 1.06564 6.53043 1.0182 6.64017C0.970763 6.74991 0.946289 6.8682 0.946289 6.98775C0.946289 7.10731 0.970763 7.2256 1.0182 7.33534C1.06564 7.44508 1.13505 7.54395 1.22214 7.62586C1.30923 7.70777 1.41217 7.77099 1.52461 7.81162C1.63706 7.85226 1.75663 7.86945 1.87597 7.86214H19.0468L14.3644 12.4916C14.2753 12.5708 14.2033 12.6673 14.1529 12.7753C14.1024 12.8832 14.0744 13.0004 14.0708 13.1195C14.0671 13.2386 14.0878 13.3572 14.1316 13.4681C14.1754 13.5789 14.2413 13.6797 14.3253 13.7642C14.4094 13.8486 14.5098 13.9151 14.6204 13.9595C14.7311 14.0038 14.8496 14.0251 14.9687 14.0221C15.0879 14.0191 15.2051 13.9918 15.3134 13.9419C15.4216 13.892 15.5185 13.8205 15.5982 13.7318L21.7407 7.64887C21.8222 7.5675 21.8869 7.47084 21.9311 7.36444C21.9752 7.25803 21.9979 7.14396 21.9979 7.02876C21.9979 6.91356 21.9752 6.7995 21.9311 6.69309C21.8869 6.58668 21.8222 6.49003 21.7407 6.40866H21.7439Z" fill="white"/>
+                        </svg>
+                    </button>   
+                </div>
+            </div>
+        </section>
+        <!-- Showroom section end -->
+    
+        <!-- News section -->
+        <section class="section-padding" id="newsSection">
+            <div class="container-md">
+                <h2 class="section-header text-center text-primary">Tin Tức Và Sự Kiện</h2>
+                <div class="d-flex gap-2 mt-5">
+                    <a class="news-card shadow-sm" href="#">
+                        <div class="news-card-img-container">
+                            <img src="./assets/images/NewsImg1.png" alt="news-card-1">
+                        </div>
+                        <div class="p-3">
+                            <h3>This is a card heading</h3>
+                            <p>28 Aug,2023 19:55</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </a>
+                    <!-- <a class="news-card shadow-sm" href="#">
+                        <div class="news-card-img-container">
+                            <img src="./assets/images/NewsImg2.png" alt="news-card-2">
+                        </div>
+                        <div class="p-3">
+                            <h3>This is a card heading</h3>
+                            <p>28 Aug,2023 19:55</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </a>
+                    <a class="news-card shadow-sm" href="#">
+                        <div class="news-card-img-container">
+                            <img src="./assets/images/NewsImg3.png" alt="news-card-3">
+                        </div>
+                        <div class="p-3">
+                            <h3>This is a card heading</h3>
+                            <p>28 Aug,2023 19:55</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </a>
+                    <a class="news-card shadow-sm" href="#">
+                        <div class="news-card-img-container">
+                            <img src="./assets/images/NewsImg4.png" alt="news-card-4">
+                        </div>
+                        <div class="p-3">
+                            <h3>This is a card heading</h3>
+                            <p>28 Aug,2023 19:55</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </a> -->
+                </div>
+                <div class="w-100 d-flex justify-content-center">
+                    <button class="button button-primary bg-primary text-light rounded-pill py-3 px-5 border-0 mt-3">
+                        <span class="me-2">Xem tất cả</span>
+                        <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.7439 6.40866L15.6014 0.243668C15.4362 0.0852305 15.2154 -0.0022176 14.9865 4.27524e-05C14.7575 0.0023031 14.5386 0.0940923 14.3765 0.255762C14.2144 0.417432 14.122 0.636135 14.1191 0.865056C14.1162 1.09398 14.2031 1.31492 14.3611 1.4806L18.9778 6.11337H1.87597C1.75663 6.10605 1.63706 6.12324 1.52461 6.16388C1.41217 6.20451 1.30923 6.26773 1.22214 6.34964C1.13505 6.43155 1.06564 6.53043 1.0182 6.64017C0.970763 6.74991 0.946289 6.8682 0.946289 6.98775C0.946289 7.10731 0.970763 7.2256 1.0182 7.33534C1.06564 7.44508 1.13505 7.54395 1.22214 7.62586C1.30923 7.70777 1.41217 7.77099 1.52461 7.81162C1.63706 7.85226 1.75663 7.86945 1.87597 7.86214H19.0468L14.3644 12.4916C14.2753 12.5708 14.2033 12.6673 14.1529 12.7753C14.1024 12.8832 14.0744 13.0004 14.0708 13.1195C14.0671 13.2386 14.0878 13.3572 14.1316 13.4681C14.1754 13.5789 14.2413 13.6797 14.3253 13.7642C14.4094 13.8486 14.5098 13.9151 14.6204 13.9595C14.7311 14.0038 14.8496 14.0251 14.9687 14.0221C15.0879 14.0191 15.2051 13.9918 15.3134 13.9419C15.4216 13.892 15.5185 13.8205 15.5982 13.7318L21.7407 7.64887C21.8222 7.5675 21.8869 7.47084 21.9311 7.36444C21.9752 7.25803 21.9979 7.14396 21.9979 7.02876C21.9979 6.91356 21.9752 6.7995 21.9311 6.69309C21.8869 6.58668 21.8222 6.49003 21.7407 6.40866H21.7439Z" fill="white"/>
+                        </svg>
+                    </button>   
+                </div>
+            </div>
+        </section>
+        <!-- News section end -->
+        
+        <!-- Reach out section -->
+        <section class="section-padding reach-out-section bg-primary position-relative overflow-hidden d-flex align-items-center" id="contactSection">
+            <img class="position-absolute reach-out-img d-none d-md-block" src="./assets/images/ReachOutImg.png" alt="reach-out-img">
+            <svg class="orange-circle-right-mid" width="304" height="562" viewBox="0 0 304 562" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="299" cy="299.007" r="235" stroke="#DB4F09" stroke-width="128"/>
+            </svg>
+            <div class="container-md position-relative">
+                <div class="reach-out ms-md-auto">
+                    <div class="d-flex gap-2 align-items-center">
+                        <img class="reach-out-section-mascot d-none d-md-block" src="./assets/images/ReachOutSectionMascot.png" alt="reach-out-mascot-img">
+                        <h2 class="text-light text-center section-header">ABCSport luôn sẵn sàng đồng hành với bạn</h2>
+                    </div>
+                    <form class="d-flex gap-2 mt-3 flex-md-row flex-column">
+                        <input class="flex-fill reach-out-input text-light" type="text" placeholder="Họ và Tên" id="reachOutSectionNameInput" name="reachOutSectionNameInput">
+                        <div class=" reach-out-input-container">
+                            <input class="reach-out-input reach-out-input-with-submit text-light" type="tel" placeholder="Số điện thoại" id="reachOutSectionPhoneInput" name="reachOutSectionPhoneInput">
+                            <button class="reach-out-button text-primary bg-light" type="submit">
+                                <span class="me-2">Tư vấn</span>
+                                <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21.7439 6.40866L15.6014 0.243668C15.4362 0.0852305 15.2154 -0.0022176 14.9865 4.27524e-05C14.7575 0.0023031 14.5386 0.0940923 14.3765 0.255762C14.2144 0.417432 14.122 0.636135 14.1191 0.865056C14.1162 1.09398 14.2031 1.31492 14.3611 1.4806L18.9778 6.11337H1.87597C1.75663 6.10605 1.63706 6.12324 1.52461 6.16388C1.41217 6.20451 1.30923 6.26773 1.22214 6.34964C1.13505 6.43155 1.06564 6.53043 1.0182 6.64017C0.970763 6.74991 0.946289 6.8682 0.946289 6.98775C0.946289 7.10731 0.970763 7.2256 1.0182 7.33534C1.06564 7.44508 1.13505 7.54395 1.22214 7.62586C1.30923 7.70777 1.41217 7.77099 1.52461 7.81162C1.63706 7.85226 1.75663 7.86945 1.87597 7.86214H19.0468L14.3644 12.4916C14.2753 12.5708 14.2033 12.6673 14.1529 12.7753C14.1024 12.8832 14.0744 13.0004 14.0708 13.1195C14.0671 13.2386 14.0878 13.3572 14.1316 13.4681C14.1754 13.5789 14.2413 13.6797 14.3253 13.7642C14.4094 13.8486 14.5098 13.9151 14.6204 13.9595C14.7311 14.0038 14.8496 14.0251 14.9687 14.0221C15.0879 14.0191 15.2051 13.9918 15.3134 13.9419C15.4216 13.892 15.5185 13.8205 15.5982 13.7318L21.7407 7.64887C21.8222 7.5675 21.8869 7.47084 21.9311 7.36444C21.9752 7.25803 21.9979 7.14396 21.9979 7.02876C21.9979 6.91356 21.9752 6.7995 21.9311 6.69309C21.8869 6.58668 21.8222 6.49003 21.7407 6.40866H21.7439Z" fill="white"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>    
+        <!-- Reach out section end -->
+    </main>
+
+    <!-- Footer section -->
+    <footer class="section-padding bg-black" id="footerSection">
+        <div class="container-md text-light">
+            <img src="./assets/images/IconFooter.png" alt="siteIconFooter">
+            <div class="d-flex pt-5 justify-content-between flex-column flex-md-row gap-5">
+                <div>
+                    <h4 >CÔNG TY TNHH ABC SPORT</h4>
+                    <div>
+                        <p class="m-0 footer-location">Giấy CNĐKDN: 0316165103</p>
+                        <p class="m-0 footer-location">Ngày cấp: 26-02-2020</p>
+                        <p class="m-0 footer-location">Cấp bởi: Sở Kế hoạch và Đầu tư TP. HCM.</p>
+                        <p class="m-0 footer-location">Địa chỉ ĐKKD: Số 8, đường Phú Mỹ 2B, Khu Mỹ Phú 2-S10,<br> KP6, P.Tân Phú, Quận 7</p>
+                        <p class="m-0 footer-location">Email: abcsportvietnam@gmail.com</p>
+                    </div>
+                </div>
+                <div class="d-flex gap-5 flex-column flex-md-row">
+                    <div>
+                        <h5 class="fs-2">Về Chúng tôi</h5>
+                        <ul class="ps-4 mt-3 d-flex flex-column gap-3">
+                            <li class="footer-link">
+                                <a class="text-opacity-50" href="#">Về chúng tôi</a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="#">Định hướng phát triển</a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="#">Chính sách bảo mật</a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="#">Cam kết về thông tin</a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="#">Trả góp qua thẻ tín dụng</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="fs-2">Hướng dẫn</h5>
+                        <ul class="ps-4 mt-3 d-flex flex-column gap-3">
+                            <li class="footer-link">
+                                <a href="#">Tiêu chí bán hàng</a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="#">Chính sách thanh toán</a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="#">Chính sách đổi trả</a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="#">Chính sách vận chuyển</a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="#">Chính sách bảo hành</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="fs-2">Xem thêm</h5>
+                        <ul class="ps-4 mt-3 d-flex flex-column gap-3">
+                            <li class="footer-link">
+                                <a href="#">Tin tức</a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="#">Thông tin tuyển dụng</a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="#">Video</a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="#">Hệ thống phân phối</a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="#">Liên hệ</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5">
+                <a  class="rounded-circle p-1 bg-light social-circle-link text-center d-inline-block" href="#">
+                    <svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.31377 9.32563L5.96713 9.56465C7.06896 9.967 8.32213 10.1782 9.59765 10.1766C11.0255 10.1766 12.4213 9.91147 13.6086 9.41477C14.7958 8.91807 15.7212 8.2121 16.2676 7.38611C16.814 6.56013 16.957 5.65125 16.6784 4.77439C16.3999 3.89753 15.7123 3.09209 14.7026 2.45991C13.6929 1.82773 12.4066 1.39721 11.0061 1.2228C9.60565 1.04838 8.15405 1.1379 6.83486 1.48003C5.51566 1.82216 4.38813 2.40154 3.59484 3.14491C2.80155 3.88827 2.37813 4.76223 2.37813 5.65626C2.37813 6.46766 2.71835 7.24572 3.35638 7.92998L3.73721 8.33907L3.14791 9.69573L5.31377 9.32563ZM0.576864 11.3067L1.79696 8.49955C0.993013 7.63665 0.570634 6.65525 0.573254 5.65626C0.573254 2.53554 4.61347 0.00585938 9.59765 0.00585938C14.5818 0.00585938 18.622 2.53554 18.622 5.65626C18.622 8.77698 14.5818 11.3067 9.59765 11.3067C8.00284 11.3083 6.43609 11.044 5.05838 10.541L0.576864 11.3067ZM6.34074 3.00509C6.46167 2.99944 6.5835 2.99944 6.70443 3.00283C6.75316 3.00509 6.80189 3.00848 6.85062 3.01187C6.99411 3.02204 7.15204 3.07685 7.20528 3.15257C7.47421 3.53454 7.73591 3.91933 7.9886 4.30525C8.04455 4.39114 8.01116 4.50132 7.90467 4.60868C7.83143 4.68127 7.75221 4.75143 7.66733 4.81887C7.56535 4.9008 7.34606 5.0511 7.34606 5.0511C7.34606 5.0511 7.25672 5.11778 7.29101 5.20084C7.30365 5.23248 7.34516 5.27825 7.38306 5.31667L7.4363 5.37035C7.66733 5.61162 7.97777 5.85629 8.35679 6.08682C8.46509 6.15237 8.57067 6.21961 8.68438 6.28233C9.10672 6.51569 9.58501 6.70611 10.1012 6.84737L10.1057 6.8485C10.1824 6.8694 10.2212 6.8807 10.3331 6.91065C10.3891 6.92534 10.4468 6.93834 10.5055 6.94794C10.5661 6.95761 10.63 6.95579 10.6889 6.94271C10.7479 6.92964 10.7993 6.90589 10.8367 6.87449C11.4901 6.37895 11.5496 6.34674 11.555 6.34674V6.34787C11.6004 6.32136 11.6544 6.30125 11.7132 6.28887C11.772 6.27649 11.8344 6.27214 11.8962 6.27611C11.9503 6.27837 12.0054 6.28459 12.0559 6.29871C12.5351 6.43602 13.3193 6.65017 13.3193 6.65017L13.8445 6.79764C13.933 6.8242 14.0133 6.88692 14.016 6.94738C14.0196 6.98524 14.025 7.04626 14.0043 7.15814C13.9754 7.30448 13.905 7.48021 13.8346 7.57231C13.7864 7.63517 13.7224 7.69278 13.6451 7.74296C13.554 7.80282 13.4543 7.8573 13.3473 7.90569C13.3102 7.92313 13.2726 7.94008 13.2345 7.95654C13.1222 8.00113 13.0069 8.04261 12.8888 8.08085C12.6565 8.15812 12.3999 8.20249 12.1371 8.21081C11.9702 8.21646 11.8032 8.22437 11.6354 8.21872C11.6281 8.21872 11.1228 8.16956 11.1228 8.16956C9.83973 7.95826 8.65314 7.56241 7.6574 7.01349C7.45345 6.90105 7.26484 6.78013 7.07172 6.65977C6.26855 6.15971 5.66211 5.6201 5.29391 5.11043C5.10546 4.86028 5.00366 4.588 4.99521 4.31147C4.99149 3.9684 5.17059 3.63436 5.50418 3.3622C5.57006 3.30908 5.63233 3.25371 5.73972 3.18986C5.85433 3.12206 5.92652 3.08589 6.00504 3.06103C6.10942 3.02828 6.2233 3.00906 6.33984 3.00453L6.34074 3.00509Z" fill="#05141F"/>
+                    </svg>
+                </a>
+                <a href="#" class="rounded-circle p-1 bg-light social-circle-link text-center d-inline-block">
+                    <svg width="20" height="9" viewBox="0 0 20 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.01875 5.49058V2.27977C9.84779 2.81612 11.2644 3.33425 12.9398 3.89286C11.5579 4.37044 9.84779 4.9063 8.01875 5.49058ZM18.212 0.682879C17.8965 0.423831 17.3588 0.222184 16.7863 0.155425C15.1036 -0.0437126 4.60576 -0.044279 2.92395 0.155425C2.46486 0.209059 2.05606 0.338699 1.70488 0.54012C0.225188 1.396 0.688854 5.98583 1.04552 6.72932C1.1955 7.05113 1.38939 7.28322 1.63356 7.43557C1.94816 7.63698 2.37889 7.77567 2.87365 7.83786C4.25915 8.01646 11.397 8.11631 16.757 7.86468C17.2508 7.81105 17.688 7.6679 18.0327 7.45792C19.4009 6.60545 19.3076 1.75787 18.212 0.682879Z" fill="#05141F"/>
+                    </svg>
+                </a>
+                <a href="#" class="rounded-circle p-1 bg-light social-circle-link text-center d-inline-block">
+                    <svg width="10" height="13" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.87521 12.0977V6.65638H9.47038L9.89429 4.23801H6.87521V3.06012C6.87521 2.43739 6.9002 1.81964 8.26721 1.81964H9.6518V0.0905851C9.6518 0.0645876 8.46248 0.00585938 7.25929 0.00585938C4.74647 0.00585938 3.17307 1.00779 3.17307 2.84756V4.23801H0.396484V6.65638H3.17307V12.0977H6.87521Z" fill="#05141F"/>
+                    </svg>
+                </a>
+                <a href="#" class="rounded-circle p-1 bg-light social-circle-link text-center d-inline-block">
+                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="20" height="23">
+                        <path d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z"/>
+                    </svg>
+                </a>
+                <img src="./assets/images/BoCongThuongMark.png" alt="bo-cong-thuong-mark">
+            </div>
+            <hr>
+            <p class="text-center">© 2023 ABCSport. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- Footer section end -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
