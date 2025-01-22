@@ -12035,7 +12035,6 @@ ul {
 
 .header-link {
   border-bottom: 2px solid transparent;
-  transition: all 0.2s;
   list-style-type: none;
   color: white;
 }
@@ -12146,7 +12145,9 @@ ul {
 .product-category {
   position: relative;
   padding: 8px;
-  width: 500px;
+  min-width: 400px;
+  height: 300px;
+  border-radius: 0px;
 }
 
 .orange-circle-bot-left {
