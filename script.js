@@ -1,3 +1,32 @@
+//Multi column carousel
+
+//Setup the carousel
+function setUpMultiColCarousel(multiColCarouselId,breakPoints){
+    const carousel = document.getElementById(multiColCarouselId)
+    const colEls = carousel.querySelectorAll(".multi-col-carousel-inner .multi-col-carousel-col")
+
+    let colSize = 1
+    let currentViewportWidth = window.innerWidth
+
+    if(breakPoints.lg>0&&currentViewportWidth>=992) colSize=breakPoints.lg
+    else if(breakPoints.md>0&&currentViewportWidth>=768) colSize = breakPoints.md
+    else if(breakPoints.sm>0&&currentViewportWidth>=576) colSize = breakPoints.sm
+
+    const gapSize = Number(window.getComputedStyle(carousel.querySelector(".multi-col-carousel-inner")).gap.replace("px",""))
+    const colWidth = (carousel.offsetWidth/colSize) - gapSize
+
+    colEls.forEach(el=>{
+        el.style.width = colWidth        
+    })
+}
+
+const salesCarouselBreakPoints = {
+    md:3,
+    sm:2,
+}
+setUpMultiColCarousel("salesCarousel",salesCarouselBreakPoints)
+window.addEventListener("resize",(e)=>setUpMultiColCarousel("salesCarousel",salesCarouselBreakPoints))
+
 //Shifting underline navigation for showroom section
 function moveUnderLine(underlineEl,activeElementToTarget){
     const activeElement = document.querySelector(activeElementToTarget)

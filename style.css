@@ -20,6 +20,16 @@ ul{
     padding-left: 0px;
 }
 
+.multi-col-carousel{
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.multi-col-carousel-inner{
+    display: flex;
+    gap: 16px;
+}
+
 .section-header{
     font-size: 3rem;
 }
@@ -111,7 +121,6 @@ ul{
     background-color: white;
     padding: 8px 8px 16px 8px;
     border: 2px solid rgba(128, 128, 128, 0.537);
-    flex: 1;
     cursor: pointer;
 }
 
