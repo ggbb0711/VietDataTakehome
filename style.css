@@ -26,8 +26,9 @@ ul{
 }
 
 .multi-col-carousel-inner{
-    display: flex;
+    display: inline-flex;
     gap: 16px;
+    transition: .2s all;
 }
 
 .section-header{
@@ -122,6 +123,12 @@ ul{
     padding: 8px 8px 16px 8px;
     border: 2px solid rgba(128, 128, 128, 0.537);
     cursor: pointer;
+}
+
+.old-price-sales{
+    font-size: .8rem;
+    text-decoration: line-through;
+    opacity: .5;
 }
 
 .product-card-img-container{
