@@ -16,7 +16,7 @@ function resizeCol(multiColCarouselId,breakPoints){
     const carousel = document.getElementById(multiColCarouselId)
     const colEls = carousel.querySelectorAll(".multi-col-carousel-inner .multi-col-carousel-col")
 
-    const colWidth = getWidthSizeOfColumn(carousel,breakPoints)
+    const colWidth = getWidthSizeOfColumn(carousel.querySelector(".multi-col-carousel"),breakPoints)
     
     colEls.forEach((el,i)=>{
         el.style.width = colWidth+"px"
@@ -68,7 +68,9 @@ function repositionCarousel(multiColCarouselId,breakPoints){
         activeCol.classList.add("active")
     }
 
-    carousel.querySelector(".multi-col-carousel-inner").style.transform = `translate(-${activeCol.offsetLeft}px)`
+    const gapSize = Number(window.getComputedStyle(carousel.querySelector(".multi-col-carousel-inner")).gap.replace("px","")) 
+    const widthWithGap = getWidthSizeOfColumn(carousel.querySelector(".multi-col-carousel"),breakPoints) + gapSize
+    carousel.querySelector(".multi-col-carousel-inner").style.transform = `translate(-${widthWithGap*colPosition}px)`
 }
 
 function setupCarouselControl(multiColCarouselId,breakPoints){
@@ -92,7 +94,6 @@ function setupCarouselControl(multiColCarouselId,breakPoints){
 
 function setUpCarousel(multiColCarouselId,breakPoints){
     resizeCol(multiColCarouselId,breakPoints)
-    repositionCarousel(multiColCarouselId,breakPoints)
     setupCarouselControl(multiColCarouselId,breakPoints)
     
     window.addEventListener("resize",(e)=>{

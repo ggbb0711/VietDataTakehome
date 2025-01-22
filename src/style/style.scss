@@ -1,6 +1,12 @@
 :root{
     --primary-orange: #FA5A0A;
+    --primary-orange-light: #FC915C;
 }
+
+$primary: #FA5A0A;
+$secondary: #FDF5F3;
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
 html{
     font-size: 13px;
@@ -20,6 +26,19 @@ ul{
     padding-left: 0px;
 }
 
+.bg-primary-light{
+    background-color: var(--primary-orange-light);
+}
+
+.zoom-in-img-container{
+    overflow: hidden;
+}
+
+.zoom-in-img-container:hover>img{
+    transition: .2s all;
+    transform: scale(1.2);
+}
+
 .multi-col-carousel{
     max-width: 100%;
     overflow: hidden;
@@ -29,6 +48,19 @@ ul{
     display: inline-flex;
     gap: 16px;
     transition: .2s all;
+}
+
+.multi-col-carousel-control-direction{
+    border-radius: 100%;
+    background-color: white;
+    padding: 11px;
+    width: 36px;
+    height: 35px;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.25);
 }
 
 .section-header{
@@ -65,7 +97,7 @@ ul{
 
 .hero-section-bg-example{
     background-color: #F2F2F2;
-    background: url(./assets/images/HeroBg-min.png) no-repeat;
+    background: url(/assets/images/HeroBg-min.png) no-repeat;
     background-size: cover;
     background-position-x: 80%;
 }
@@ -142,6 +174,7 @@ ul{
     left: 0px;
     padding: 3px 6px;
     color: white;
+    z-index: 2;
 }
 
 .product-card-img{
@@ -251,6 +284,11 @@ ul{
 .news-card-img-container{
     min-height: 170px;
     overflow: hidden;
+    border-radius: 8px 8px 0px 0px
+}
+
+.news-card-img{
+    width: 110%;
 }
 
 .reach-out-section{
