@@ -12157,6 +12157,7 @@ ul {
   height: 250px;
   border-radius: 0px;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .orange-circle-bot-left {
