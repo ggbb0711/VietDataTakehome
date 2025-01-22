@@ -1,0 +1,1 @@
+To run the file, start a local server with vsCode HTML live plugin from src/index.html
