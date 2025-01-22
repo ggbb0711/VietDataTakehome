@@ -17,6 +17,10 @@ html{
     font-family: "Nunito", serif;
 }
 
+::-ms-clear {
+    display: none;
+}
+
 a{
     text-decoration: none;
     color: inherit;
@@ -96,7 +100,7 @@ ul{
 
 .hero-section-bg-example{
     background-color: #F2F2F2;
-    background: url(/assets/images/HeroBg-min.png) no-repeat;
+    background: url(/assets/images/HeroBg.png) no-repeat;
     background-size: cover;
     background-position-x: 80%;
 }
@@ -162,6 +166,10 @@ ul{
     opacity: .5;
 }
 
+.product-category-slider{
+    transform: translateX(-125px);
+}
+
 .product-card-img-container{
     width: 100%;
     position: relative;
@@ -183,14 +191,15 @@ ul{
 .product-category{
     position: relative;
     padding: 8px;
-    min-width: 400px;
-    height: 300px;
+    min-width: 350px;
+    height: 250px;
     border-radius: 0px;
+    overflow: hidden;
 }
 
 .orange-circle-bot-left{
     position: absolute;
-    bottom: -110%;
+    bottom: -70%;
     left: -30%;
 }
 
